@@ -15,23 +15,22 @@ function $parcel$export(e, n, v, s) {
           : {};
   var parcelRequire = $parcel$global["parcelRequire55a1"];
 var parcelRegister = parcelRequire.register;
-parcelRegister("62UXc", function(module, exports) {
+parcelRegister("9csc1", function(module, exports) {
 
-$parcel$export(module.exports, "HASLDepartureCardEditor", function () { return $8933bf2cbd0479e1$export$8d2c87e174389bfd; });
+$parcel$export(module.exports, "HASLDepartureCardEditor", () => $8606f342b2a743fe$export$8d2c87e174389bfd);
 
-var $9tTrf = parcelRequire("9tTrf");
+var $6Auly = parcelRequire("6Auly");
 
-var $58hVP = parcelRequire("58hVP");
+var $6t47e = parcelRequire("6t47e");
 
-var $1WJcw = parcelRequire("1WJcw");
+var $fUHpH = parcelRequire("fUHpH");
 
-var $8ZoOn = parcelRequire("8ZoOn");
-let $8933bf2cbd0479e1$var$_ = (t)=>t, $8933bf2cbd0479e1$var$t;
-class $8933bf2cbd0479e1$export$8d2c87e174389bfd extends (0, $58hVP.LitElement) {
+var $cGi29 = parcelRequire("cGi29");
+class $8606f342b2a743fe$export$8d2c87e174389bfd extends (0, $6t47e.LitElement) {
     setConfig(config) {
         var _config_entities;
         this._config = config;
-        this._schema = this.getSchema((0, $8ZoOn.translateTo)((0, $8ZoOn.getLanguage)()));
+        this._schema = this.getSchema((0, $cGi29.translateTo)((0, $cGi29.getLanguage)()));
         // Migrate to multiple entities
         if (config.entity && !((_config_entities = config.entities) === null || _config_entities === void 0 ? void 0 : _config_entities.length)) {
             const { entity: entity, ...rest } = config;
@@ -58,17 +57,17 @@ class $8933bf2cbd0479e1$export$8d2c87e174389bfd extends (0, $58hVP.LitElement) {
         this.dispatchEvent(event);
     }
     render() {
-        const lang = (0, $8ZoOn.getLanguage)();
-        const _1 = (0, $8ZoOn.translateTo)(lang);
-        return (0, $58hVP.html)($8933bf2cbd0479e1$var$t || ($8933bf2cbd0479e1$var$t = $8933bf2cbd0479e1$var$_`
+        const lang = (0, $cGi29.getLanguage)();
+        const _ = (0, $cGi29.translateTo)(lang);
+        return (0, $6t47e.html)`
       <ha-form
-        .hass=${0}
-        .data=${0}
-        .schema=${0}
-        .computeLabel=${0}
-        @value-changed=${0}>
+        .hass=${this.hass}
+        .data=${this._config}
+        .schema=${this._schema || []}
+        .computeLabel=${(item, data)=>_(`editor_${item.name}`) || item.label || item.name}
+        @value-changed=${this._valueChanged}>
       </ha-form>
-    `), this.hass, this._config, this._schema || [], (item, data)=>_1(`editor_${item.name}`) || item.label || item.name, this._valueChanged);
+    `;
     }
     constructor(...args){
         super(...args);
@@ -202,20 +201,20 @@ class $8933bf2cbd0479e1$export$8d2c87e174389bfd extends (0, $58hVP.LitElement) {
         };
     }
 }
-(0, $9tTrf.__decorate)([
-    (0, $1WJcw.property)({
+(0, $6Auly.__decorate)([
+    (0, $fUHpH.property)({
         attribute: false
     })
-], $8933bf2cbd0479e1$export$8d2c87e174389bfd.prototype, "hass", void 0);
-(0, $9tTrf.__decorate)([
-    (0, $1WJcw.state)()
-], $8933bf2cbd0479e1$export$8d2c87e174389bfd.prototype, "_config", void 0);
-(0, $9tTrf.__decorate)([
-    (0, $1WJcw.state)()
-], $8933bf2cbd0479e1$export$8d2c87e174389bfd.prototype, "_schema", void 0);
-$8933bf2cbd0479e1$export$8d2c87e174389bfd = (0, $9tTrf.__decorate)([
-    (0, $1WJcw.customElement)("hasl4-departure-card-editor")
-], $8933bf2cbd0479e1$export$8d2c87e174389bfd);
+], $8606f342b2a743fe$export$8d2c87e174389bfd.prototype, "hass", void 0);
+(0, $6Auly.__decorate)([
+    (0, $fUHpH.state)()
+], $8606f342b2a743fe$export$8d2c87e174389bfd.prototype, "_config", void 0);
+(0, $6Auly.__decorate)([
+    (0, $fUHpH.state)()
+], $8606f342b2a743fe$export$8d2c87e174389bfd.prototype, "_schema", void 0);
+$8606f342b2a743fe$export$8d2c87e174389bfd = (0, $6Auly.__decorate)([
+    (0, $fUHpH.customElement)("hasl4-departure-card-editor")
+], $8606f342b2a743fe$export$8d2c87e174389bfd);
 
 });
 
