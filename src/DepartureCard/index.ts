@@ -65,7 +65,12 @@ export class HASLDepartureCard extends LitElement implements LovelaceCard {
     static getStubConfig = () => ({...DEFAULT_CONFIG})
 
     render() {
-        if (!this.config || !this.hass) return nothing
+	if (!this.config) return nothing
+
+        if (!this.hass) {
+	  return html`<ha-card><div class="card-content">Loading...</div></ha-card>
+	}
+
         const lang = getLanguage(this.config?.language)
         const _ = translateTo(lang)
 
