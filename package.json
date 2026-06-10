@@ -4,7 +4,7 @@
   "description": "HASL Departure Lovelace Card",
   "browserslist": "android >= 5, chrome >= 63",
   "source": "src/index.ts",
-  "module": "dist/hasl4-departure-card.js",
+  "module": "dist/hasl4o-departure-card.js",
   "targets": {
     "module": {
       "includeNodeModules": true
