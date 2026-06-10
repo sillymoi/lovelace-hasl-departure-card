@@ -68,7 +68,7 @@ export class HASLDepartureCard extends LitElement implements LovelaceCard {
 	if (!this.config) return nothing
 
         if (!this.hass) {
-	  return html`<ha-card><div class="card-content">Loading...</div></ha-card>
+	  return html`<ha-card><div class="card-content">Loading...</div></ha-card>`
 	}
 
         const lang = getLanguage(this.config?.language)
