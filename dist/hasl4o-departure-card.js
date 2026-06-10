@@ -1824,6 +1824,9 @@ const $90f3bbc9fa0076d2$var$diffMinutes = (from, to)=>{
 };
 
 class $90f3bbc9fa0076d2$export$7ded24e6705f9c64 extends (0, $7trZ0.LitElement) {
+    createRenderRoot() {
+        return this;
+    }
     setConfig(config) {
         this.config = {
             ...(0, $7f950be7366d237b$export$c2f8e0cc249a8d8f),
@@ -1857,9 +1860,50 @@ class $90f3bbc9fa0076d2$export$7ded24e6705f9c64 extends (0, $7trZ0.LitElement) {
     }
     render() {
         if (!this.config) return (0, $atRog.html)`<ha-card><div class="card-content">No config...</div></ha-card>`;
-        if (!this.hass) return (0, $atRog.html)`<ha-card><div class="card-content">Loading...</div></ha-card>`;
-        return (0, $atRog.html)`<ha-card><div class="card-content">HERE I AM</div></ha-card>`;
-    }
+        if (!this.hass) return (0, $atRog.html)`<ha-card><div class="card-content">No hass...</div></ha-card>`;
+        return (0, $atRog.html)`<div style="color:red; font-size:30px;">VISIBLE TEST</div>`;
+    /*
+        const lang = getLanguage(this.config?.language)
+        const _ = translateTo(lang)
+
+        const departures =
+            this.config?.show_departures
+                ? () => {
+                    const data = this.renderDepartures()
+                    return (data === nothing)
+                        ? html`<span>${_(`entity_missing`)}</span>`
+                        : data
+                }
+                : () => nothing
+
+        const renderLastUpdated =
+            this.isManyEntitiesSet()
+                ? () => nothing
+                : () => {
+                    const [data, __] = this.getFirstEntity()
+                    if (!data) return nothing;
+
+                    return (this.config?.show_updated && data.last_updated)
+                        ? html`
+                            <div class="updated right">
+                                ${_("last_updated")}
+                                ${new Date(data.last_updated).toLocaleTimeString(lang)}
+                            </div>`
+                        : nothing
+        }
+
+        return html`
+            <ha-card @click="${this.clickHandler()}">
+                ${this.config?.title
+                    ? html`<h1 class="card-header"><div class="name">${this.config.title}</div></h1>`
+                    : nothing}
+                <div class="card-content">
+                    ${departures()}
+                    ${renderLastUpdated()}
+                </div>
+            </ha-card>
+        `
+*/ }
     getFirstEntity() {
         var _this_config_entities, _this_config, _this_config1, _this_hass;
         const data = (_this_hass = this.hass) === null || _this_hass === void 0 ? void 0 : _this_hass.states[((_this_config = this.config) === null || _this_config === void 0 ? void 0 : (_this_config_entities = _this_config.entities) === null || _this_config_entities === void 0 ? void 0 : _this_config_entities[0]) || ((_this_config1 = this.config) === null || _this_config1 === void 0 ? void 0 : _this_config1.entity)];

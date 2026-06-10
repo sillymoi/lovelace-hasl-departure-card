@@ -24,6 +24,10 @@ export class HASLDepartureCard extends LitElement implements LovelaceCard {
     @property({ attribute: false })
     public hass?: HomeAssistant
 
+    createRenderRoot() {
+        return this
+    }
+
     setConfig(config: DepartureCardConfig) {
         this.config = {...DEFAULT_CONFIG, ...config}
     }
@@ -65,15 +69,15 @@ export class HASLDepartureCard extends LitElement implements LovelaceCard {
     static getStubConfig = () => ({...DEFAULT_CONFIG})
 
     render() {
-	if (!this.config) {
-	  return html`<ha-card><div class="card-content">No config...</div></ha-card>`
+	    if (!this.config) {
+	        return html`<ha-card><div class="card-content">No config...</div></ha-card>`
         }
 
         if (!this.hass) {
-	  return html`<ha-card><div class="card-content">Loading...</div></ha-card>`
-	}
+	        return html`<ha-card><div class="card-content">No hass...</div></ha-card>`
+	    }
 
-	return html`<ha-card><div class="card-content">HERE I AM</div></ha-card>`
+	return html`<div style="color:red; font-size:30px;">VISIBLE TEST</div>`
 /*
         const lang = getLanguage(this.config?.language)
         const _ = translateTo(lang)
