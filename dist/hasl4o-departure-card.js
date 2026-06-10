@@ -1836,8 +1836,7 @@ class $90f3bbc9fa0076d2$export$7ded24e6705f9c64 extends (0, $7trZ0.LitElement) {
             if (!attrs) return 0;
             return this.config.show_entity_name && attrs.friendly_name ? 1 : 0;
         })();
-        // const deps = this.getDepartures();
-        const deps = [];
+        const deps = this.getDepartures();
         const size = [
             !!this.config.title ? 1 : 0,
             singleEntitityExtras,
@@ -1957,7 +1956,7 @@ class $90f3bbc9fa0076d2$export$7ded24e6705f9c64 extends (0, $7trZ0.LitElement) {
             var _this_hass;
             const state = (_this_hass = this.hass) === null || _this_hass === void 0 ? void 0 : _this_hass.states[entity];
             if ($90f3bbc9fa0076d2$var$isDepartureAttrs(state.attributes)) return state.attributes;
-        }).flatMap((attrs)=>attrs.departures)// filter by departure time
+        }).reduce((acc, attrs)=>acc.concat(attrs.departures || []), [])// filter by departure time
         .filter((d)=>{
             var _this_config, _this_config1;
             if (!((_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.hide_departed)) return true;
