@@ -1856,34 +1856,9 @@ class $90f3bbc9fa0076d2$export$7ded24e6705f9c64 extends (0, $7trZ0.LitElement) {
         return await (parcelRequire("2qUC8")).then(()=>document.createElement("hasl4-departure-card-editor"));
     }
     render() {
-        var _this_config, _this_config1, _this_config2;
-        if (!this.config) return 0, $atRog.nothing;
+        if (!this.config) return (0, $atRog.html)`<ha-card><div class="card-content">No config...</div></ha-card>`;
         if (!this.hass) return (0, $atRog.html)`<ha-card><div class="card-content">Loading...</div></ha-card>`;
-        const lang = (0, $cGi29.getLanguage)((_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.language);
-        const _ = (0, $cGi29.translateTo)(lang);
-        const departures = ((_this_config1 = this.config) === null || _this_config1 === void 0 ? void 0 : _this_config1.show_departures) ? ()=>{
-            const data = this.renderDepartures();
-            return data === (0, $atRog.nothing) ? (0, $atRog.html)`<span>${_(`entity_missing`)}</span>` : data;
-        } : ()=>(0, $atRog.nothing);
-        const renderLastUpdated = this.isManyEntitiesSet() ? ()=>(0, $atRog.nothing) : ()=>{
-            var _this_config;
-            const [data, __] = this.getFirstEntity();
-            if (!data) return 0, $atRog.nothing;
-            return ((_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.show_updated) && data.last_updated ? (0, $atRog.html)`
-                            <div class="updated right">
-                                ${_("last_updated")}
-                                ${new Date(data.last_updated).toLocaleTimeString(lang)}
-                            </div>` : (0, $atRog.nothing);
-        };
-        return (0, $atRog.html)`
-            <ha-card @click="${this.clickHandler()}">
-                ${((_this_config2 = this.config) === null || _this_config2 === void 0 ? void 0 : _this_config2.title) ? (0, $atRog.html)`<h1 class="card-header"><div class="name">${this.config.title}</div></h1>` : (0, $atRog.nothing)}
-                <div class="card-content">
-                    ${departures()}
-                    ${renderLastUpdated()}
-                </div>
-            </ha-card>
-        `;
+        return (0, $atRog.html)`<ha-card><div class="card-content">HERE I AM</div></ha-card>`;
     }
     getFirstEntity() {
         var _this_config_entities, _this_config, _this_config1, _this_hass;
