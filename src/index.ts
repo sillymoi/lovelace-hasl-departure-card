@@ -5,7 +5,7 @@ declare global {
         customCards: Array<Object>
     }
 }
-customElements.define('hasl4-departure-card', HASLDepartureCard)
+customElements.define('hasl4o-departure-card', HASLDepartureCard)
 
 window.customCards = window.customCards || []
 window.customCards.push({

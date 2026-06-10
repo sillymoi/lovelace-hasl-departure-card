@@ -2127,7 +2127,7 @@ function $90f3bbc9fa0076d2$var$isDepartureAttrs(item) {
 }
 
 
-customElements.define("hasl4-departure-card", (0, $90f3bbc9fa0076d2$export$7ded24e6705f9c64));
+customElements.define("hasl4o-departure-card", (0, $90f3bbc9fa0076d2$export$7ded24e6705f9c64));
 window.customCards = window.customCards || [];
 window.customCards.push({
     type: "hasl4-departure-card",
