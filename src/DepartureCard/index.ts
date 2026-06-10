@@ -69,6 +69,7 @@ export class HASLDepartureCard extends LitElement implements LovelaceCard {
     static getStubConfig = () => ({...DEFAULT_CONFIG})
 
     render() {
+    /*
 	    if (!this.config) {
 	        return html`<ha-card><div class="card-content">No config...</div></ha-card>`
         }
@@ -76,8 +77,12 @@ export class HASLDepartureCard extends LitElement implements LovelaceCard {
         if (!this.hass) {
 	        return html`<ha-card><div class="card-content">No hass...</div></ha-card>`
 	    }
-
-	return html`<div style="color:red; font-size:30px;">VISIBLE TEST</div>`
+*/
+        return html`
+            <div style="position: fixed; top: 0; left: 0; z-index: 99999; background: red; color: white; font-size: 40px;">
+            VISIBLE TEST
+            </div>
+        `
 /*
         const lang = getLanguage(this.config?.language)
         const _ = translateTo(lang)
