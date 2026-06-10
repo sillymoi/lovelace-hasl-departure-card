@@ -74,7 +74,7 @@ export class HASLDepartureCard extends LitElement implements LovelaceCard {
 	}
 
 	return html`<ha-card><div class="card-content">HERE I AM</div></ha-card>`
-
+/*
         const lang = getLanguage(this.config?.language)
         const _ = translateTo(lang)
 
@@ -115,6 +115,7 @@ export class HASLDepartureCard extends LitElement implements LovelaceCard {
                 </div>
             </ha-card>
         `
+*/
     }
 
     private isManyEntitiesSet = () => this.config?.entities?.length > 1
