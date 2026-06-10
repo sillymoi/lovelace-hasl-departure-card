@@ -1856,15 +1856,9 @@ class $90f3bbc9fa0076d2$export$7ded24e6705f9c64 extends (0, $7trZ0.LitElement) {
         return await (parcelRequire("2qUC8")).then(()=>document.createElement("hasl4-departure-card-editor"));
     }
     render() {
-        /*
-	    if (!this.config) {
-	        return html`<ha-card><div class="card-content">No config...</div></ha-card>`
-        }
-
-        if (!this.hass) {
-	        return html`<ha-card><div class="card-content">No hass...</div></ha-card>`
-	    }
-*/ return (0, $atRog.html)`
+        if (!this.config) return (0, $atRog.html)`<ha-card><div class="card-content">No config...</div></ha-card>`;
+        if (!this.hass) return (0, $atRog.html)`<ha-card><div class="card-content">No hass...</div></ha-card>`;
+        return (0, $atRog.html)`
             <div style="position: fixed; top: 0; left: 0; z-index: 99999; background: red; color: white; font-size: 40px;">
             VISIBLE TEST
             </div>
