@@ -1,53 +1,3 @@
-
-function $parcel$export(e, n, v, s) {
-  Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
-}
-
-      var $parcel$global =
-        typeof globalThis !== 'undefined'
-          ? globalThis
-          : typeof self !== 'undefined'
-          ? self
-          : typeof window !== 'undefined'
-          ? window
-          : typeof global !== 'undefined'
-          ? global
-          : {};
-  
-var $parcel$modules = {};
-var $parcel$inits = {};
-
-var parcelRequire = $parcel$global["parcelRequire55a1"];
-
-if (parcelRequire == null) {
-  parcelRequire = function(id) {
-    if (id in $parcel$modules) {
-      return $parcel$modules[id].exports;
-    }
-    if (id in $parcel$inits) {
-      var init = $parcel$inits[id];
-      delete $parcel$inits[id];
-      var module = {id: id, exports: {}};
-      $parcel$modules[id] = module;
-      init.call(module.exports, module, module.exports);
-      return module.exports;
-    }
-    var err = new Error("Cannot find module '" + id + "'");
-    err.code = 'MODULE_NOT_FOUND';
-    throw err;
-  };
-
-  parcelRequire.register = function register(id, init) {
-    $parcel$inits[id] = init;
-  };
-
-  $parcel$global["parcelRequire55a1"] = parcelRequire;
-}
-
-var parcelRegister = parcelRequire.register;
-parcelRegister("6Auly", function(module, exports) {
-
-$parcel$export(module.exports, "__decorate", () => $4cbda5194077ed3c$export$29e00dfd3077644b);
 /******************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -553,25 +503,49 @@ var $4cbda5194077ed3c$export$2e2bcd8739ae039 = {
     __disposeResources: $4cbda5194077ed3c$export$8f076105dc360e92
 };
 
-});
 
-parcelRegister("6t47e", function(module, exports) {
-$parcel$export(module.exports, "css", () => (parcelRequire("8ZOWA")).css);
-$parcel$export(module.exports, "html", () => (parcelRequire("atRog")).html);
-$parcel$export(module.exports, "LitElement", () => (parcelRequire("7trZ0")).LitElement);
-$parcel$export(module.exports, "nothing", () => (parcelRequire("atRog")).nothing);
-parcelRequire("dHzJH");
-parcelRequire("atRog");
-parcelRequire("7trZ0");
-parcelRequire("dsSVU");
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */ const $68cb89a3abd471e1$var$t = window, $68cb89a3abd471e1$export$b4d10f6001c083c2 = $68cb89a3abd471e1$var$t.ShadowRoot && (void 0 === $68cb89a3abd471e1$var$t.ShadyCSS || $68cb89a3abd471e1$var$t.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, $68cb89a3abd471e1$var$s = Symbol(), $68cb89a3abd471e1$var$n = new WeakMap;
+class $68cb89a3abd471e1$export$505d1e8739bad805 {
+    get styleSheet() {
+        let t = this.o;
+        const s = this.t;
+        if ($68cb89a3abd471e1$export$b4d10f6001c083c2 && void 0 === t) {
+            const e = void 0 !== s && 1 === s.length;
+            e && (t = $68cb89a3abd471e1$var$n.get(s)), void 0 === t && ((this.o = t = new CSSStyleSheet).replaceSync(this.cssText), e && $68cb89a3abd471e1$var$n.set(s, t));
+        }
+        return t;
+    }
+    toString() {
+        return this.cssText;
+    }
+    constructor(t, e, n){
+        if (this._$cssResult$ = !0, n !== $68cb89a3abd471e1$var$s) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
+        this.cssText = t, this.t = e;
+    }
+}
+const $68cb89a3abd471e1$export$8d80f9cac07cdb3 = (t)=>new $68cb89a3abd471e1$export$505d1e8739bad805("string" == typeof t ? t : t + "", void 0, $68cb89a3abd471e1$var$s), $68cb89a3abd471e1$export$dbf350e5966cf602 = (t, ...e)=>{
+    const n = 1 === t.length ? t[0] : e.reduce((e, s, n)=>e + ((t)=>{
+            if (!0 === t._$cssResult$) return t.cssText;
+            if ("number" == typeof t) return t;
+            throw Error("Value passed to 'css' function must be a 'css' function result: " + t + ". Use 'unsafeCSS' to pass non-literal values, but take care to ensure page security.");
+        })(s) + t[n + 1], t[0]);
+    return new $68cb89a3abd471e1$export$505d1e8739bad805(n, t, $68cb89a3abd471e1$var$s);
+}, $68cb89a3abd471e1$export$2ca4a66ec4cecb90 = (s, n)=>{
+    $68cb89a3abd471e1$export$b4d10f6001c083c2 ? s.adoptedStyleSheets = n.map((t)=>t instanceof CSSStyleSheet ? t : t.styleSheet) : n.forEach((e)=>{
+        const n = document.createElement("style"), o = $68cb89a3abd471e1$var$t.litNonce;
+        void 0 !== o && n.setAttribute("nonce", o), n.textContent = e.cssText, s.appendChild(n);
+    });
+}, $68cb89a3abd471e1$export$ee69dfd951e24778 = $68cb89a3abd471e1$export$b4d10f6001c083c2 ? (t)=>t : (t)=>t instanceof CSSStyleSheet ? ((t)=>{
+        let e = "";
+        for (const s of t.cssRules)e += s.cssText;
+        return $68cb89a3abd471e1$export$8d80f9cac07cdb3(e);
+    })(t) : t;
 
-});
-parcelRegister("dHzJH", function(module, exports) {
 
-$parcel$export(module.exports, "ReactiveElement", () => $9f9b02ef11fc3381$export$c7c07a37856565d);
-$parcel$export(module.exports, "css", () => (parcelRequire("8ZOWA")).css);
-
-var $8ZOWA = parcelRequire("8ZOWA");
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -669,8 +643,8 @@ class $9f9b02ef11fc3381$export$c7c07a37856565d extends HTMLElement {
         const s = [];
         if (Array.isArray(i)) {
             const e = new Set(i.flat(1 / 0).reverse());
-            for (const i of e)s.unshift((0, $8ZOWA.getCompatibleStyle)(i));
-        } else void 0 !== i && s.push((0, $8ZOWA.getCompatibleStyle)(i));
+            for (const i of e)s.unshift((0, $68cb89a3abd471e1$export$ee69dfd951e24778)(i));
+        } else void 0 !== i && s.push((0, $68cb89a3abd471e1$export$ee69dfd951e24778)(i));
         return s;
     }
     static _$Ep(t, i) {
@@ -697,7 +671,7 @@ class $9f9b02ef11fc3381$export$c7c07a37856565d extends HTMLElement {
     createRenderRoot() {
         var t;
         const s = null !== (t = this.shadowRoot) && void 0 !== t ? t : this.attachShadow(this.constructor.shadowRootOptions);
-        return (0, $8ZOWA.adoptStyles)(s, this.constructor.elementStyles), s;
+        return (0, $68cb89a3abd471e1$export$2ca4a66ec4cecb90)(s, this.constructor.elementStyles), s;
     }
     connectedCallback() {
         var t;
@@ -803,62 +777,7 @@ $9f9b02ef11fc3381$export$c7c07a37856565d[$9f9b02ef11fc3381$var$d] = !0, $9f9b02e
     ReactiveElement: $9f9b02ef11fc3381$export$c7c07a37856565d
 }), (null !== ($9f9b02ef11fc3381$var$s = $9f9b02ef11fc3381$var$e.reactiveElementVersions) && void 0 !== $9f9b02ef11fc3381$var$s ? $9f9b02ef11fc3381$var$s : $9f9b02ef11fc3381$var$e.reactiveElementVersions = []).push("1.6.3");
 
-});
-parcelRegister("8ZOWA", function(module, exports) {
 
-$parcel$export(module.exports, "css", () => $68cb89a3abd471e1$export$dbf350e5966cf602);
-$parcel$export(module.exports, "adoptStyles", () => $68cb89a3abd471e1$export$2ca4a66ec4cecb90);
-$parcel$export(module.exports, "getCompatibleStyle", () => $68cb89a3abd471e1$export$ee69dfd951e24778);
-/**
- * @license
- * Copyright 2019 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */ const $68cb89a3abd471e1$var$t = window, $68cb89a3abd471e1$export$b4d10f6001c083c2 = $68cb89a3abd471e1$var$t.ShadowRoot && (void 0 === $68cb89a3abd471e1$var$t.ShadyCSS || $68cb89a3abd471e1$var$t.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, $68cb89a3abd471e1$var$s = Symbol(), $68cb89a3abd471e1$var$n = new WeakMap;
-class $68cb89a3abd471e1$export$505d1e8739bad805 {
-    get styleSheet() {
-        let t = this.o;
-        const s = this.t;
-        if ($68cb89a3abd471e1$export$b4d10f6001c083c2 && void 0 === t) {
-            const e = void 0 !== s && 1 === s.length;
-            e && (t = $68cb89a3abd471e1$var$n.get(s)), void 0 === t && ((this.o = t = new CSSStyleSheet).replaceSync(this.cssText), e && $68cb89a3abd471e1$var$n.set(s, t));
-        }
-        return t;
-    }
-    toString() {
-        return this.cssText;
-    }
-    constructor(t, e, n){
-        if (this._$cssResult$ = !0, n !== $68cb89a3abd471e1$var$s) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
-        this.cssText = t, this.t = e;
-    }
-}
-const $68cb89a3abd471e1$export$8d80f9cac07cdb3 = (t)=>new $68cb89a3abd471e1$export$505d1e8739bad805("string" == typeof t ? t : t + "", void 0, $68cb89a3abd471e1$var$s), $68cb89a3abd471e1$export$dbf350e5966cf602 = (t, ...e)=>{
-    const n = 1 === t.length ? t[0] : e.reduce((e, s, n)=>e + ((t)=>{
-            if (!0 === t._$cssResult$) return t.cssText;
-            if ("number" == typeof t) return t;
-            throw Error("Value passed to 'css' function must be a 'css' function result: " + t + ". Use 'unsafeCSS' to pass non-literal values, but take care to ensure page security.");
-        })(s) + t[n + 1], t[0]);
-    return new $68cb89a3abd471e1$export$505d1e8739bad805(n, t, $68cb89a3abd471e1$var$s);
-}, $68cb89a3abd471e1$export$2ca4a66ec4cecb90 = (s, n)=>{
-    $68cb89a3abd471e1$export$b4d10f6001c083c2 ? s.adoptedStyleSheets = n.map((t)=>t instanceof CSSStyleSheet ? t : t.styleSheet) : n.forEach((e)=>{
-        const n = document.createElement("style"), o = $68cb89a3abd471e1$var$t.litNonce;
-        void 0 !== o && n.setAttribute("nonce", o), n.textContent = e.cssText, s.appendChild(n);
-    });
-}, $68cb89a3abd471e1$export$ee69dfd951e24778 = $68cb89a3abd471e1$export$b4d10f6001c083c2 ? (t)=>t : (t)=>t instanceof CSSStyleSheet ? ((t)=>{
-        let e = "";
-        for (const s of t.cssRules)e += s.cssText;
-        return $68cb89a3abd471e1$export$8d80f9cac07cdb3(e);
-    })(t) : t;
-
-});
-
-
-parcelRegister("atRog", function(module, exports) {
-
-$parcel$export(module.exports, "html", () => $7a160706d9f9bf99$export$c0bb0b647f701bb5);
-$parcel$export(module.exports, "noChange", () => $7a160706d9f9bf99$export$9c068ae9cc5db4e8);
-$parcel$export(module.exports, "nothing", () => $7a160706d9f9bf99$export$45b790e32b2810ee);
-$parcel$export(module.exports, "render", () => $7a160706d9f9bf99$export$b3890eb0ae9dca99);
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -1150,28 +1069,16 @@ const $7a160706d9f9bf99$export$b3890eb0ae9dca99 = (t, i, s)=>{
     return l._$AI(t), l;
 };
 
-});
 
-parcelRegister("7trZ0", function(module, exports) {
-$parcel$export(module.exports, "css", () => (parcelRequire("8ZOWA")).css);
-$parcel$export(module.exports, "ReactiveElement", () => (parcelRequire("dHzJH")).ReactiveElement);
-$parcel$export(module.exports, "html", () => (parcelRequire("atRog")).html);
-$parcel$export(module.exports, "noChange", () => (parcelRequire("atRog")).noChange);
-$parcel$export(module.exports, "nothing", () => (parcelRequire("atRog")).nothing);
-$parcel$export(module.exports, "render", () => (parcelRequire("atRog")).render);
 
-$parcel$export(module.exports, "LitElement", () => $5710f2aa24bb2884$export$3f2f9f5909897157);
 
-var $dHzJH = parcelRequire("dHzJH");
-
-var $atRog = parcelRequire("atRog");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */ var $5710f2aa24bb2884$var$l, $5710f2aa24bb2884$var$o;
-const $5710f2aa24bb2884$export$8bf27daf9e8907c9 = (0, $dHzJH.ReactiveElement);
-class $5710f2aa24bb2884$export$3f2f9f5909897157 extends (0, $dHzJH.ReactiveElement) {
+const $5710f2aa24bb2884$export$8bf27daf9e8907c9 = (0, $9f9b02ef11fc3381$export$c7c07a37856565d);
+class $5710f2aa24bb2884$export$3f2f9f5909897157 extends (0, $9f9b02ef11fc3381$export$c7c07a37856565d) {
     createRenderRoot() {
         var t, e;
         const i = super.createRenderRoot();
@@ -1179,7 +1086,7 @@ class $5710f2aa24bb2884$export$3f2f9f5909897157 extends (0, $dHzJH.ReactiveEleme
     }
     update(t) {
         const i = this.render();
-        this.hasUpdated || (this.renderOptions.isConnected = this.isConnected), super.update(t), this._$Do = (0, $atRog.render)(i, this.renderRoot, this.renderOptions);
+        this.hasUpdated || (this.renderOptions.isConnected = this.isConnected), super.update(t), this._$Do = (0, $7a160706d9f9bf99$export$b3890eb0ae9dca99)(i, this.renderRoot, this.renderOptions);
     }
     connectedCallback() {
         var t;
@@ -1190,7 +1097,7 @@ class $5710f2aa24bb2884$export$3f2f9f5909897157 extends (0, $dHzJH.ReactiveEleme
         super.disconnectedCallback(), null === (t = this._$Do) || void 0 === t || t.setConnected(!1);
     }
     render() {
-        return 0, $atRog.noChange;
+        return 0, $7a160706d9f9bf99$export$9c068ae9cc5db4e8;
     }
     constructor(){
         super(...arguments), this.renderOptions = {
@@ -1213,36 +1120,16 @@ const $5710f2aa24bb2884$export$f5c524615a7708d6 = {
 };
 (null !== ($5710f2aa24bb2884$var$o = globalThis.litElementVersions) && void 0 !== $5710f2aa24bb2884$var$o ? $5710f2aa24bb2884$var$o : globalThis.litElementVersions = []).push("3.3.3");
 
-});
 
-parcelRegister("dsSVU", function(module, exports) {
 /**
  * @license
  * Copyright 2022 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */ const $02879ef98f035a2c$export$6acf61af03e62db = !1;
 
-});
 
 
-parcelRegister("fUHpH", function(module, exports) {
-$parcel$export(module.exports, "customElement", () => (parcelRequire("3m4T1")).customElement);
-$parcel$export(module.exports, "property", () => (parcelRequire("3o7pD")).property);
-$parcel$export(module.exports, "state", () => (parcelRequire("eaWyO")).state);
-parcelRequire("3m4T1");
-parcelRequire("3o7pD");
-parcelRequire("eaWyO");
-parcelRequire("RiIlm");
-parcelRequire("eg0j0");
-parcelRequire("iiOt5");
-parcelRequire("diKGC");
-parcelRequire("aWh6R");
-parcelRequire("cuZu4");
 
-});
-parcelRegister("3m4T1", function(module, exports) {
-
-$parcel$export(module.exports, "customElement", () => $2717378abbd58b74$export$da64fc29f17f9d0e);
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -1258,11 +1145,7 @@ $parcel$export(module.exports, "customElement", () => $2717378abbd58b74$export$d
             };
         })(e, n);
 
-});
 
-parcelRegister("3o7pD", function(module, exports) {
-
-$parcel$export(module.exports, "property", () => $27795cf6d1834bb4$export$d541bacb2bda4494);
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -1291,45 +1174,20 @@ function $27795cf6d1834bb4$export$d541bacb2bda4494(n) {
     return (t, o)=>void 0 !== o ? $27795cf6d1834bb4$var$e(n, t, o) : $27795cf6d1834bb4$var$i(n, t);
 }
 
-});
 
-parcelRegister("eaWyO", function(module, exports) {
 
-$parcel$export(module.exports, "state", () => $a51f6cc031a16337$export$ca000e230c0caa3e);
-
-var $3o7pD = parcelRequire("3o7pD");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */ function $a51f6cc031a16337$export$ca000e230c0caa3e(t) {
-    return (0, $3o7pD.property)({
+    return (0, $27795cf6d1834bb4$export$d541bacb2bda4494)({
         ...t,
         state: !0
     });
 }
 
-});
 
-parcelRegister("RiIlm", function(module, exports) {
-
-var $aHXwZ = parcelRequire("aHXwZ");
-/**
- * @license
- * Copyright 2017 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */ function $0a03779b0cee1a05$export$b2b799818fbabcf3(e) {
-    return (0, $aHXwZ.decorateProperty)({
-        finisher: (r, t)=>{
-            Object.assign(r.prototype[t], e);
-        }
-    });
-}
-
-});
-parcelRegister("aHXwZ", function(module, exports) {
-
-$parcel$export(module.exports, "decorateProperty", () => $7cbc19296fdd824b$export$757d561a932dc1cb);
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -1363,18 +1221,27 @@ $parcel$export(module.exports, "decorateProperty", () => $7cbc19296fdd824b$expor
         }
     };
 
-});
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */ function $0a03779b0cee1a05$export$b2b799818fbabcf3(e) {
+    return (0, $7cbc19296fdd824b$export$757d561a932dc1cb)({
+        finisher: (r, t)=>{
+            Object.assign(r.prototype[t], e);
+        }
+    });
+}
 
 
-parcelRegister("eg0j0", function(module, exports) {
 
-var $aHXwZ = parcelRequire("aHXwZ");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */ function $a612cc005104f476$export$2fa187e846a241c4(i, n) {
-    return (0, $aHXwZ.decorateProperty)({
+    return (0, $7cbc19296fdd824b$export$757d561a932dc1cb)({
         descriptor: (o)=>{
             const t = {
                 get () {
@@ -1396,17 +1263,14 @@ var $aHXwZ = parcelRequire("aHXwZ");
     });
 }
 
-});
 
-parcelRegister("iiOt5", function(module, exports) {
 
-var $aHXwZ = parcelRequire("aHXwZ");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */ function $d5310e5ef493a173$export$dcd0d083aa86c355(e) {
-    return (0, $aHXwZ.decorateProperty)({
+    return (0, $7cbc19296fdd824b$export$757d561a932dc1cb)({
         descriptor: (r)=>({
                 get () {
                     var r, o;
@@ -1418,17 +1282,14 @@ var $aHXwZ = parcelRequire("aHXwZ");
     });
 }
 
-});
 
-parcelRegister("diKGC", function(module, exports) {
 
-var $aHXwZ = parcelRequire("aHXwZ");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */ function $9af12bc5efc05cde$export$163dfc35cc43f240(e) {
-    return (0, $aHXwZ.decorateProperty)({
+    return (0, $7cbc19296fdd824b$export$757d561a932dc1cb)({
         descriptor: (r)=>({
                 async get () {
                     var r;
@@ -1440,13 +1301,8 @@ var $aHXwZ = parcelRequire("aHXwZ");
     });
 }
 
-});
 
-parcelRegister("aWh6R", function(module, exports) {
 
-$parcel$export(module.exports, "queryAssignedElements", () => $7f6c97c5b3dc420b$export$4682af2d9ee91415);
-
-var $aHXwZ = parcelRequire("aHXwZ");
 /**
  * @license
  * Copyright 2021 Google LLC
@@ -1455,7 +1311,7 @@ var $aHXwZ = parcelRequire("aHXwZ");
 const $7f6c97c5b3dc420b$var$e = null != (null === ($7f6c97c5b3dc420b$var$n = window.HTMLSlotElement) || void 0 === $7f6c97c5b3dc420b$var$n ? void 0 : $7f6c97c5b3dc420b$var$n.prototype.assignedElements) ? (o, n)=>o.assignedElements(n) : (o, n)=>o.assignedNodes(n).filter((o)=>o.nodeType === Node.ELEMENT_NODE);
 function $7f6c97c5b3dc420b$export$4682af2d9ee91415(n) {
     const { slot: l, selector: t } = null != n ? n : {};
-    return (0, $aHXwZ.decorateProperty)({
+    return (0, $7cbc19296fdd824b$export$757d561a932dc1cb)({
         descriptor: (o)=>({
                 get () {
                     var o;
@@ -1468,13 +1324,9 @@ function $7f6c97c5b3dc420b$export$4682af2d9ee91415(n) {
     });
 }
 
-});
 
-parcelRegister("cuZu4", function(module, exports) {
 
-var $aHXwZ = parcelRequire("aHXwZ");
 
-var $aWh6R = parcelRequire("aWh6R");
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -1483,11 +1335,11 @@ var $aWh6R = parcelRequire("aWh6R");
     let l, s = o;
     return "object" == typeof o ? (s = o.slot, l = o) : l = {
         flatten: n
-    }, r ? (0, $aWh6R.queryAssignedElements)({
+    }, r ? (0, $7f6c97c5b3dc420b$export$4682af2d9ee91415)({
         slot: s,
         flatten: n,
         selector: r
-    }) : (0, $aHXwZ.decorateProperty)({
+    }) : (0, $7cbc19296fdd824b$export$757d561a932dc1cb)({
         descriptor: (e)=>({
                 get () {
                     var e, t;
@@ -1500,13 +1352,9 @@ var $aWh6R = parcelRequire("aWh6R");
     });
 }
 
-});
 
 
-parcelRegister("cGi29", function(module, exports) {
 
-$parcel$export(module.exports, "getLanguage", () => $22c6b0593b9c7388$export$64783e31db14f0ba);
-$parcel$export(module.exports, "translateTo", () => $22c6b0593b9c7388$export$df5de7d5c552d075);
 const $22c6b0593b9c7388$var$defaultLang = `en-US`;
 const $22c6b0593b9c7388$var$defaultTranslation = {
     entity_missing: "Entity data missing",
@@ -1611,541 +1459,197 @@ const $22c6b0593b9c7388$export$64783e31db14f0ba = (configLang)=>{
 };
 const $22c6b0593b9c7388$export$df5de7d5c552d075 = (lang)=>(key)=>$22c6b0593b9c7388$export$625550452a3fa3ec(key, lang);
 
-});
 
-parcelRegister("2qUC8", function(module, exports) {
-module.exports = import("./hasl4-departure-card-editor.js").then(()=>parcelRequire("9csc1"));
-
-});
-
-
-var $6Auly = parcelRequire("6Auly");
-parcelRequire("6t47e");
-var $atRog = parcelRequire("atRog");
-var $7trZ0 = parcelRequire("7trZ0");
-parcelRequire("fUHpH");
-var $eaWyO = parcelRequire("eaWyO");
-var $3o7pD = parcelRequire("3o7pD");
-var $29d13d4993054b5f$export$6d07abd9f0bba447;
-(function(TransportType) {
-    TransportType["METRO"] = "METRO";
-    TransportType["BUS"] = "BUS";
-    TransportType["TRAM"] = "TRAM";
-    TransportType["TRAIN"] = "TRAIN";
-    TransportType["SHIP"] = "SHIP";
-    TransportType["FERRY"] = "FETTRY";
-    TransportType["TAXI"] = "TAXI";
-})($29d13d4993054b5f$export$6d07abd9f0bba447 || ($29d13d4993054b5f$export$6d07abd9f0bba447 = {}));
-
-
-
-var $cGi29 = parcelRequire("cGi29");
-const $7f950be7366d237b$export$c2f8e0cc249a8d8f = {
-    title: "",
-    entities: [],
-    show_entity_name: true,
-    show_header: true,
-    show_icon: true,
-    show_departures: true,
-    direction: 0,
-    max_departures: 5,
-    hide_departed: true,
-    show_departed_offeset: 5,
-    show_updated: true,
-    tap_action: "info"
-};
-
-
-parcelRequire("6t47e");
-var $8ZOWA = parcelRequire("8ZOWA");
-const $5f2c50f3fbed56c0$var$lineColorsStyles = (0, $8ZOWA.css)`
-    .line-icon {
-        border-radius: 3px;
-        padding: 3px 3px 0 3px;
-        color: #fff;
-        min-width: 22px;
-        height: 22px;
-        font-weight: 500;
-        display: inline-block;
-        text-align: center;
-        text-shadow: 1px 1px 2px var(--outline-color);
-    }
-
-    .bus {
-        border: 1px solid var(--outline-color);
-        color: var(--primary-text-color);
-    }
-
-    .red {
-        background-color: #d71d24;
-    }
-    .blue {
-        background-color: #0089ca;
-    }
-    .green {
-        background-color: #179d4d;
-    }
-
-    .train {
-        background-color: #ec619f;
-    }
-
-    .tram {
-        background-color: #985141;
-    }
-
-    .tram_7 {
-        background-color: #878a83;
-    }
-
-    .tram_12 {
-        background-color: #778da7;
-    }
-
-    .tram_21 {
-        background-color: #b76020;
-    }
-
-    .tram_22 {
-        background-color: #d77d00;
-    }
-    `;
-const $5f2c50f3fbed56c0$var$departureEntityStyles = (0, $8ZOWA.css)`
-    .card-header .name {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .departures > :first-child {
-        margin-top: 0;
-    }
-
-    .departure.departed {
-        color: var(--secondary-text-color);
-    }
-
-    .departure.departed > .main {
-        text-decoration: line-through;
-    }
-
-    .row {
-        margin-top: 8px;
-
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .col {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-    }
-
-    .col.icon {
-        flex-basis: 40px;
-    }
-
-    .row.name {
-        height: 40px;
-        padding-left: 8px;
-        font-weight: 400;
-        font-size: large;
-        align-items: center;
-        justify-content: center;
-    }
-    .row.header {
-        height: 40px;
-        font-size: medium;
-        font-weight: 400;
-        font-family: var(--paper-font-headline_-_font-family);
-        letter-spacing: var(--paper-font-headline_-_letter-spacing);
-        line-height: var(--paper-font-headline_-_line-height);
-        text-rendering: var(--paper-font-common-expensive-kerning_-_text-rendering);
-        opacity: var(--dark-primary-opacity);
-    }
-
-    .main {
-        flex: 2;
-    }
-
-    .transport-icon {
-        width: 40px;
-        height: 40px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .warning {
-        color: var(--warning-color);
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-
-    .warning-message {
-        color: var(--warning-color);
-        font-size: smaller;
-        text-decoration: unset;
-    }
-
-    .mr1 {
-        margin-right: 8px;
-    }
-
-    .updated {
-        padding-left: 16px;
-        padding-top: 8px;
-        font-size: smaller;
-    }
-
-    .center { text-align: center; }
-    .left { text-align: left; }
-    .right { text-align: right; }
-
-    ha-icon {
-        transition: color 0.3s ease-in-out, filter 0.3s ease-in-out;
-        width: 24px;
-        height: 24px;
-        color: var(--paper-item-icon-color);
-    }
-`;
-var $5f2c50f3fbed56c0$export$2e2bcd8739ae039 = [
-    $5f2c50f3fbed56c0$var$departureEntityStyles,
-    $5f2c50f3fbed56c0$var$lineColorsStyles
-];
-
-
-const $90f3bbc9fa0076d2$var$diffMinutes = (from, to)=>{
-    const diffMinutes = Math.ceil((from.getTime() - to.getTime()) / 1000 / 60);
-    return diffMinutes;
-};
-
-class $90f3bbc9fa0076d2$export$7ded24e6705f9c64 extends (0, $7trZ0.LitElement) {
+class $8606f342b2a743fe$export$8d2c87e174389bfd extends (0, $5710f2aa24bb2884$export$3f2f9f5909897157) {
     setConfig(config) {
-        this.config = {
-            ...(0, $7f950be7366d237b$export$c2f8e0cc249a8d8f),
-            ...config
+        var _config_entities;
+        this._config = config;
+        this._schema = this.getSchema((0, $22c6b0593b9c7388$export$df5de7d5c552d075)((0, $22c6b0593b9c7388$export$64783e31db14f0ba)()));
+        // Migrate to multiple entities
+        if (config.entity && !((_config_entities = config.entities) === null || _config_entities === void 0 ? void 0 : _config_entities.length)) {
+            const { entity: entity, ...rest } = config;
+            this._dispatchConfigChangedEvent({
+                ...rest,
+                entities: [
+                    config.entity
+                ]
+            });
+        }
+    }
+    _valueChanged(ev) {
+        ev.stopPropagation();
+        this._dispatchConfigChangedEvent(ev.detail.value);
+    }
+    _dispatchConfigChangedEvent(newConfig) {
+        const event = new Event("config-changed", {
+            bubbles: true,
+            composed: true
+        });
+        event.detail = {
+            config: newConfig
         };
-    }
-    getCardSize() {
-        const singleEntitityExtras = (this.isManyEntitiesSet() ? ()=>0 : ()=>{
-            const [_, attrs] = this.getFirstEntity();
-            if (!attrs) return 0;
-            return this.config.show_entity_name && attrs.friendly_name ? 1 : 0;
-        })();
-        const deps = this.getDepartures();
-        const size = [
-            !!this.config.title ? 1 : 0,
-            singleEntitityExtras,
-            !!this.config.show_header ? 1 : 0,
-            (deps === null || deps === void 0 ? void 0 : deps.length) || 0
-        ].reduce((sum, entity)=>sum += entity ? entity : 0, 0);
-        return Math.max(size, 1);
-    }
-    getLayoutOptions() {
-        return {
-            grid_min_columns: 3,
-            grid_min_rows: 2
-        };
-    }
-    // configuration card is loaded in async manner
-    static async getConfigElement() {
-        return await (parcelRequire("2qUC8")).then(()=>document.createElement("hasl4-departure-card-editor"));
+        this.dispatchEvent(event);
     }
     render() {
-        if (!this.config) return (0, $atRog.html)`<ha-card><div class="card-content">No config...</div></ha-card>`;
-        if (!this.hass) return (0, $atRog.html)`<ha-card><div class="card-content">No hass...</div></ha-card>`;
-        return (0, $atRog.html)`
-            <div style="position: fixed; top: 0; left: 0; z-index: 99999; background: red; color: white; font-size: 40px;">
-            VISIBLE TEST
-            </div>
-        `;
-    /*
-        const lang = getLanguage(this.config?.language)
-        const _ = translateTo(lang)
-
-        const departures =
-            this.config?.show_departures
-                ? () => {
-                    const data = this.renderDepartures()
-                    return (data === nothing)
-                        ? html`<span>${_(`entity_missing`)}</span>`
-                        : data
-                }
-                : () => nothing
-
-        const renderLastUpdated =
-            this.isManyEntitiesSet()
-                ? () => nothing
-                : () => {
-                    const [data, __] = this.getFirstEntity()
-                    if (!data) return nothing;
-
-                    return (this.config?.show_updated && data.last_updated)
-                        ? html`
-                            <div class="updated right">
-                                ${_("last_updated")}
-                                ${new Date(data.last_updated).toLocaleTimeString(lang)}
-                            </div>`
-                        : nothing
-        }
-
-        return html`
-            <ha-card @click="${this.clickHandler()}">
-                ${this.config?.title
-                    ? html`<h1 class="card-header"><div class="name">${this.config.title}</div></h1>`
-                    : nothing}
-                <div class="card-content">
-                    ${departures()}
-                    ${renderLastUpdated()}
-                </div>
-            </ha-card>
-        `
-*/ }
-    getFirstEntity() {
-        var _this_config_entities, _this_config, _this_config1, _this_hass;
-        const data = (_this_hass = this.hass) === null || _this_hass === void 0 ? void 0 : _this_hass.states[((_this_config = this.config) === null || _this_config === void 0 ? void 0 : (_this_config_entities = _this_config.entities) === null || _this_config_entities === void 0 ? void 0 : _this_config_entities[0]) || ((_this_config1 = this.config) === null || _this_config1 === void 0 ? void 0 : _this_config1.entity)];
-        const attrs = data === null || data === void 0 ? void 0 : data.attributes;
-        if (data && attrs && $90f3bbc9fa0076d2$var$isDepartureAttrs(attrs)) return [
-            data,
-            attrs
-        ];
-        return [
-            undefined,
-            undefined
-        ];
-    }
-    getDeparturesFor(attrs) {
-        var _attrs_departures, _this_config;
-        if (!attrs) return [];
-        const now = new Date();
-        return (((_attrs_departures = attrs.departures) === null || _attrs_departures === void 0 ? void 0 : _attrs_departures.filter((d)=>{
-            var _this_config, _this_config1;
-            if (((_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.direction) === 0) return true;
-            return d.direction_code === ((_this_config1 = this.config) === null || _this_config1 === void 0 ? void 0 : _this_config1.direction);
-        })// filter by departure time
-        .filter((d)=>{
-            var _this_config, _this_config1;
-            if (!((_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.hide_departed)) return true;
-            const diff = $90f3bbc9fa0076d2$var$diffMinutes(new Date(d.expected), now);
-            return diff + ((_this_config1 = this.config) === null || _this_config1 === void 0 ? void 0 : _this_config1.show_departed_offeset) >= 0;
-        })) || []).slice(0, (_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.max_departures);
-    }
-    getDeparturesCombined(entities) {
-        var _this_config;
-        const now = new Date();
-        return entities// filter invalid entities
-        .filter((entity)=>{
-            var _this_hass;
-            if (!!entity === false) return false;
-            const data = (_this_hass = this.hass) === null || _this_hass === void 0 ? void 0 : _this_hass.states[entity];
-            if (data === undefined) return false;
-            if (!$90f3bbc9fa0076d2$var$isDepartureAttrs(data.attributes)) return false;
-            return true;
-        })// map entity name to departures and gather all together
-        .map((entity)=>{
-            var _this_hass;
-            const state = (_this_hass = this.hass) === null || _this_hass === void 0 ? void 0 : _this_hass.states[entity];
-            if ($90f3bbc9fa0076d2$var$isDepartureAttrs(state.attributes)) return state.attributes;
-        }).reduce((acc, attrs)=>acc.concat(attrs.departures || []), [])// filter by departure time
-        .filter((d)=>{
-            var _this_config, _this_config1;
-            if (!((_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.hide_departed)) return true;
-            const diff = $90f3bbc9fa0076d2$var$diffMinutes(new Date(d.expected), now);
-            return diff + ((_this_config1 = this.config) === null || _this_config1 === void 0 ? void 0 : _this_config1.show_departed_offeset) >= 0;
-        })// filter direction
-        .filter((d)=>{
-            var _this_config, _this_config1;
-            if (((_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.direction) === 0) return true;
-            return d.direction_code === ((_this_config1 = this.config) === null || _this_config1 === void 0 ? void 0 : _this_config1.direction);
-        })// sort by expected departure time
-        .sort((a, b)=>new Date(a.expected).getTime() - new Date(b.expected).getTime())// limit to max departures
-        .slice(0, (_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.max_departures);
-    }
-    getDepartures() {
-        var _this_config;
-        if (this.isManyEntitiesSet()) return this.getDeparturesCombined(((_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.entities) || []);
-        const [_, attrs] = this.getFirstEntity();
-        if (!attrs) return undefined;
-        return this.getDeparturesFor(attrs);
-    }
-    lineIconClass(type, line, group) {
-        let cls = "";
-        switch(type){
-            case (0, $29d13d4993054b5f$export$6d07abd9f0bba447).BUS:
-                cls = `bus bus_${line}`;
-                cls = group === "bl\xe5buss" ? `${cls} blue` : cls;
-                break;
-            case (0, $29d13d4993054b5f$export$6d07abd9f0bba447).METRO:
-                cls = `metro metro_${line}`;
-                switch(line){
-                    case "10":
-                    case "11":
-                        cls = `${cls} blue`;
-                        break;
-                    case "13":
-                    case "14":
-                        cls = `${cls} red`;
-                        break;
-                    default:
-                        cls = `${cls} green`;
-                }
-                break;
-            case (0, $29d13d4993054b5f$export$6d07abd9f0bba447).TRAM:
-                cls = `tram tram_${line}`;
-                break;
-            case (0, $29d13d4993054b5f$export$6d07abd9f0bba447).TRAIN:
-                cls = `train train_${line}`;
-                break;
-        }
-        return cls;
-    }
-    _serviceCall(domain, service, data) {
-        this.hass.callService(domain, service, data);
-    }
-    _showAttributes(el, type, detail, options) {
-        const event = new Event(type, {
-            bubbles: Boolean(options === null || options === void 0 ? void 0 : options.bubbles),
-            cancelable: Boolean(options === null || options === void 0 ? void 0 : options.cancelable),
-            composed: Boolean(options === null || options === void 0 ? void 0 : options.composed) || true
-        });
-        event.detail = detail || {};
-        el.dispatchEvent(event);
-        return event;
+        const lang = (0, $22c6b0593b9c7388$export$64783e31db14f0ba)();
+        const _ = (0, $22c6b0593b9c7388$export$df5de7d5c552d075)(lang);
+        return (0, $7a160706d9f9bf99$export$c0bb0b647f701bb5)`
+      <ha-form
+        .hass=${this.hass}
+        .data=${this._config}
+        .schema=${this._schema || []}
+        .computeLabel=${(item, data)=>_(`editor_${item.name}`) || item.label || item.name}
+        @value-changed=${this._valueChanged}>
+      </ha-form>
+    `;
     }
     constructor(...args){
         super(...args);
-        this.isManyEntitiesSet = ()=>{
-            var _this_config_entities, _this_config;
-            return ((_this_config = this.config) === null || _this_config === void 0 ? void 0 : (_this_config_entities = _this_config.entities) === null || _this_config_entities === void 0 ? void 0 : _this_config_entities.length) > 1;
-        };
-        this.renderDepartures = ()=>{
-            var _this_config, _this_config1, _this_config2;
-            const renderEntityName = ()=>{
-                const [_, attrs] = this.getFirstEntity();
-                if (!attrs) return 0, $atRog.nothing;
-                return this.config.show_entity_name && attrs.friendly_name ? (0, $atRog.html)`<div class="row name">${attrs.friendly_name}</div` : (0, $atRog.nothing);
-            };
-            const now = new Date();
-            const lang = (0, $cGi29.getLanguage)((_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.language);
-            const _ = (0, $cGi29.translateTo)(lang);
-            const departures = this.getDepartures();
-            if (!departures) return 0, $atRog.nothing;
-            const isMany = this.isManyEntitiesSet();
-            const destinationRegex = ((_this_config1 = this.config) === null || _this_config1 === void 0 ? void 0 : _this_config1.regex) ? {
-                search: new RegExp(this.config.regex.search),
-                replace: this.config.regex.replace
-            } : undefined;
-            return (0, $atRog.html)`
-            <div class="departures">
-                ${isMany ? "" : renderEntityName()}
-                ${this.config.show_header ? (0, $atRog.html)`
-                    <div class="row header">
-                        ${((_this_config2 = this.config) === null || _this_config2 === void 0 ? void 0 : _this_config2.show_icon) ? (0, $atRog.html)`<div class="col icon"></div>` : (0, $atRog.nothing)}
-                        <div class="col main left">${_("line")}</div>
-                        <div class="col right">${_("departure")}</div>
-                    </div>` : (0, $atRog.nothing)}
-
-                ${departures.map((dep)=>{
-                var _dep_deviations, _dep_deviations_sort, _dep_deviations1, _this_config, _this_config1, _this_config2;
-                const expectedAt = new Date(dep.expected);
-                const diff = $90f3bbc9fa0076d2$var$diffMinutes(expectedAt, now);
-                const isAtThePlatform = diff === 0;
-                const isDeparted = diff < 0;
-                const hasDeviations = (((_dep_deviations = dep.deviations) === null || _dep_deviations === void 0 ? void 0 : _dep_deviations.length) || 0) > 0;
-                const mostImportantDeviation = (_dep_deviations1 = dep.deviations) === null || _dep_deviations1 === void 0 ? void 0 : (_dep_deviations_sort = _dep_deviations1.sort((a, b)=>b.importance_level - a.importance_level)) === null || _dep_deviations_sort === void 0 ? void 0 : _dep_deviations_sort[0];
-                const departureTime = ((_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.show_time_always) ? expectedAt.toLocaleTimeString(lang, {
-                    hour: "numeric",
-                    minute: "numeric"
-                }) : (()=>{
-                    return isAtThePlatform ? _("now") : (0, $atRog.html)`<ha-relative-time .hass=${this.hass} .datetime=${expectedAt}></ha-relative-time>`;
-                })();
-                const icon = {
-                    [(0, $29d13d4993054b5f$export$6d07abd9f0bba447).METRO]: "mdi:subway",
-                    [(0, $29d13d4993054b5f$export$6d07abd9f0bba447).BUS]: "mdi:bus",
-                    [(0, $29d13d4993054b5f$export$6d07abd9f0bba447).TRAM]: "mdi:tram",
-                    [(0, $29d13d4993054b5f$export$6d07abd9f0bba447).TRAIN]: "mdi:train",
-                    [(0, $29d13d4993054b5f$export$6d07abd9f0bba447).SHIP]: "mdi:ship",
-                    [(0, $29d13d4993054b5f$export$6d07abd9f0bba447).FERRY]: "mdi:ferry",
-                    [(0, $29d13d4993054b5f$export$6d07abd9f0bba447).TAXI]: "mdi:taxi"
-                }[dep.line.transport_mode] || "mdi:train";
-                const lineIconClass = this.lineIconClass(dep.line.transport_mode, dep.line.designation, dep.line.group_of_lines);
-                // if destinationRegex is set, use it to extract the part of the destination to show
-                const destination = (()=>{
-                    if (!destinationRegex) return dep.destination;
-                    const { search: search, replace: replace } = destinationRegex;
-                    return dep.destination.replace(search, replace);
-                })();
-                return (0, $atRog.html)`
-                    <div class="row departure fade-in ${isDeparted ? "departed" : ""}">
-                        ${((_this_config1 = this.config) === null || _this_config1 === void 0 ? void 0 : _this_config1.show_icon) ? (0, $atRog.html)`
-                            <div class="col icon">
-                                <ha-icon class="transport-icon" icon="${icon}"/>
-                            </div>
-                        ` : (0, $atRog.nothing)}
-                        ${((_this_config2 = this.config) === null || _this_config2 === void 0 ? void 0 : _this_config2.hide_line_number) ? (0, $atRog.nothing) : (0, $atRog.html)`
-                            <div class="col icon">
-                                <span class="line-icon mr1 ${lineIconClass}">${dep.line.designation}</span>
-                                ${hasDeviations ? (0, $atRog.html)`<ha-icon class="warning" icon="mdi:alert"/>` : (0, $atRog.nothing)}
-                            </div>
-                        `}
-                        <div class="col main left">
-                            ${destination}
-                            ${hasDeviations ? (0, $atRog.html)`<span class="warning-message">${mostImportantDeviation.message}</span>` : (0, $atRog.nothing)}
-                        </div>
-                        <div class="col right">
-                            <span class="leaves-in">${departureTime}</span>
-                        </div>
-                    </div>`;
-            })}
-            </div>
-        `;
-        };
-        this.clickHandler = (entity)=>(e)=>{
-                var _this_config;
-                const action = (_this_config = this.config) === null || _this_config === void 0 ? void 0 : _this_config.click_action;
-                if (action === undefined) return;
-                if (action == "info" && entity) {
-                    e.preventDefault();
-                    this._showAttributes(this, "hass-more-info", {
-                        entityId: entity
-                    });
-                    return;
-                } else if ($90f3bbc9fa0076d2$var$isEntityInfoAction(action)) {
-                    e.preventDefault();
-                    this._showAttributes(this, "hass-more-info", {
-                        entityId: action.entityId
-                    });
-                    return;
-                } else if ($90f3bbc9fa0076d2$var$isServiceCallAction(action)) {
-                    e.preventDefault();
-                    this._serviceCall(action.domain, action.service, action.data);
-                    return;
+        this.getSchema = (_)=>{
+            var _this__config_entities, _this__config;
+            const haveMultipleEntities = ((_this__config = this._config) === null || _this__config === void 0 ? void 0 : (_this__config_entities = _this__config.entities) === null || _this__config_entities === void 0 ? void 0 : _this__config_entities.length) > 1;
+            return [
+                {
+                    name: "title",
+                    selector: {
+                        text: {}
+                    }
+                },
+                // { name: "language", selector: { select: { mode: 'dropdown', options: languages } } },
+                {
+                    name: "",
+                    type: "expandable",
+                    icon: "mdi:database",
+                    title: _("editor_entities"),
+                    schema: [
+                        {
+                            name: "show_entity_name",
+                            type: "boolean",
+                            disabled: haveMultipleEntities
+                        },
+                        {
+                            name: "entities",
+                            selector: {
+                                entity: {
+                                    multiple: true,
+                                    filter: [
+                                        {
+                                            domain: "sensor",
+                                            integration: "hasl3"
+                                        },
+                                        {
+                                            domain: "sensor",
+                                            integration: "london_tfl"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    name: "",
+                    type: "expandable",
+                    icon: "mdi:clock",
+                    title: _("editor_departures"),
+                    schema: [
+                        {
+                            name: "show_departures",
+                            type: "boolean"
+                        },
+                        {
+                            name: "show_header",
+                            type: "boolean"
+                        },
+                        {
+                            name: "direction",
+                            selector: {
+                                select: {
+                                    options: [
+                                        {
+                                            value: 0,
+                                            label: _(`editor_direction_all`)
+                                        },
+                                        {
+                                            value: 1,
+                                            label: _(`editor_direction_left`)
+                                        },
+                                        {
+                                            value: 2,
+                                            label: _(`editor_direction_right`)
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            name: "show_icon",
+                            type: "boolean"
+                        },
+                        {
+                            name: "hide_line_number",
+                            type: "boolean"
+                        },
+                        {
+                            name: "show_time_always",
+                            type: "boolean"
+                        },
+                        {
+                            name: "max_departures",
+                            selector: {
+                                number: {
+                                    mode: "box",
+                                    min: 1,
+                                    max: 10
+                                }
+                            }
+                        },
+                        {
+                            name: "",
+                            type: "grid",
+                            schema: [
+                                {
+                                    name: "hide_departed",
+                                    type: "boolean"
+                                },
+                                {
+                                    name: "show_departed_offeset",
+                                    selector: {
+                                        number: {
+                                            mode: "box",
+                                            min: 0,
+                                            max: 30
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "show_updated",
+                    type: "boolean",
+                    disabled: haveMultipleEntities
                 }
-            };
+            ];
+        };
     }
 }
-$90f3bbc9fa0076d2$export$7ded24e6705f9c64.styles = (0, $5f2c50f3fbed56c0$export$2e2bcd8739ae039);
-$90f3bbc9fa0076d2$export$7ded24e6705f9c64.getStubConfig = ()=>({
-        ...(0, $7f950be7366d237b$export$c2f8e0cc249a8d8f)
-    });
-(0, $6Auly.__decorate)([
-    (0, $eaWyO.state)()
-], $90f3bbc9fa0076d2$export$7ded24e6705f9c64.prototype, "config", void 0);
-(0, $6Auly.__decorate)([
-    (0, $3o7pD.property)({
+(0, $4cbda5194077ed3c$export$29e00dfd3077644b)([
+    (0, $27795cf6d1834bb4$export$d541bacb2bda4494)({
         attribute: false
     })
-], $90f3bbc9fa0076d2$export$7ded24e6705f9c64.prototype, "hass", void 0);
-const $90f3bbc9fa0076d2$var$isEntityInfoAction = (a)=>a.entityId !== undefined;
-const $90f3bbc9fa0076d2$var$isServiceCallAction = (a)=>a.service !== undefined;
-function $90f3bbc9fa0076d2$var$isDepartureAttrs(item) {
-    return item.departures !== undefined;
-}
+], $8606f342b2a743fe$export$8d2c87e174389bfd.prototype, "hass", void 0);
+(0, $4cbda5194077ed3c$export$29e00dfd3077644b)([
+    (0, $a51f6cc031a16337$export$ca000e230c0caa3e)()
+], $8606f342b2a743fe$export$8d2c87e174389bfd.prototype, "_config", void 0);
+(0, $4cbda5194077ed3c$export$29e00dfd3077644b)([
+    (0, $a51f6cc031a16337$export$ca000e230c0caa3e)()
+], $8606f342b2a743fe$export$8d2c87e174389bfd.prototype, "_schema", void 0);
+$8606f342b2a743fe$export$8d2c87e174389bfd = (0, $4cbda5194077ed3c$export$29e00dfd3077644b)([
+    (0, $2717378abbd58b74$export$da64fc29f17f9d0e)("hasl4-departure-card-editor")
+], $8606f342b2a743fe$export$8d2c87e174389bfd);
 
 
-export {$90f3bbc9fa0076d2$export$7ded24e6705f9c64 as HASLDepartureCard};
+export {$8606f342b2a743fe$export$8d2c87e174389bfd as HASLDepartureCardEditor};
 //# sourceMappingURL=hasl4o-departure-card.js.map
