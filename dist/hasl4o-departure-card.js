@@ -1859,19 +1859,9 @@ class $90f3bbc9fa0076d2$export$7ded24e6705f9c64 extends (0, $7trZ0.LitElement) {
         return await (parcelRequire("2qUC8")).then(()=>document.createElement("hasl4-departure-card-editor"));
     }
     render() {
-        /*
-	    if (!this.config) {
-	        return html`<ha-card><div class="card-content">No config...</div></ha-card>`
-        }
-
-        if (!this.hass) {
-	        return html`<ha-card><div class="card-content">No hass...</div></ha-card>`
-	    }
-*/ return (0, $atRog.html)`
-            <div style="position: fixed; top: 0; left: 0; z-index: 99999; background: red; color: white; font-size: 40px;">
-            VISIBLE TEST
-            </div>
-        `;
+        if (!this.config) return (0, $atRog.html)`<ha-card><div class="card-content">No config...</div></ha-card>`;
+        if (!this.hass) return (0, $atRog.html)`<ha-card><div class="card-content">Loading...</div></ha-card>`;
+        return (0, $atRog.html)`<ha-card><div class="card-content">HERE I AM</div></ha-card>`;
     /*
         const lang = getLanguage(this.config?.language)
         const _ = translateTo(lang)
@@ -2156,13 +2146,5 @@ function $90f3bbc9fa0076d2$var$isDepartureAttrs(item) {
 }
 
 
-customElements.define("hasl4o-departure-card", (0, $90f3bbc9fa0076d2$export$7ded24e6705f9c64));
-window.customCards = window.customCards || [];
-window.customCards.push({
-    type: "hasl4o-departure-card",
-    name: "HASL4o Departure card",
-    description: "Show departure times for SL Trafik"
-});
-
-
+export {$90f3bbc9fa0076d2$export$7ded24e6705f9c64 as HASLDepartureCard};
 //# sourceMappingURL=hasl4o-departure-card.js.map
