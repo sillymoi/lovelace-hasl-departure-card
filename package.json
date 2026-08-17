@@ -8,7 +8,7 @@
   "targets": {
     "module": {
       "includeNodeModules": true,
-      "outputFormat": "commonjs",
+      "outputFormat": "esmodule",
       "isLibrary": false,
       "engines": {
         "browsers": "chrome >= 51"
@@ -32,7 +32,7 @@
     "home-assistant-js-websocket": "^8.0.1",
     "parcel": "^2.12.0",
     "parcel-namer-rewrite": "^2.10.3-rc.2",
-    "typescript": "^5.4.2"
+    "typescript": "^4.9.5"
   },
   "volta": {
     "node": "18.19.1"

@@ -1,10 +1,9 @@
 {
     "compilerOptions": {
         "module": "es2015",
-        "isolatedModules": true,
         "target": "es6",
         "moduleResolution": "node",
         "experimentalDecorators": true,
-        "useDefineForClassFields": false,
+        "useDefineForClassFields": false
     }
 }
