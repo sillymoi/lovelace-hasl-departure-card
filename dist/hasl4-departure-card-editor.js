@@ -1,3 +1,7 @@
+import {_ as $d7rxi$_} from "@swc/helpers/_/_ts_decorate";
+import {html as $d7rxi$html, LitElement as $d7rxi$LitElement} from "lit";
+import {property as $d7rxi$property, state as $d7rxi$state, customElement as $d7rxi$customElement} from "lit/decorators";
+
 
 function $parcel$export(e, n, v, s) {
   Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
@@ -15,22 +19,19 @@ function $parcel$export(e, n, v, s) {
           : {};
   var parcelRequire = $parcel$global["parcelRequire55a1"];
 var parcelRegister = parcelRequire.register;
-parcelRegister("dYljA", function(module, exports) {
+parcelRegister("3lTG7", function(module, exports) {
 
-$parcel$export(module.exports, "HASLDepartureCardEditor", () => $6c4e85c78a3068f3$export$8d2c87e174389bfd);
+$parcel$export(module.exports, "HASLDepartureCardEditor", () => $3192a706339a2f39$export$8d2c87e174389bfd);
 
-var $i052v = parcelRequire("i052v");
 
-var $lpSYy = parcelRequire("lpSYy");
 
-var $jIMgP = parcelRequire("jIMgP");
 
-var $j944g = parcelRequire("j944g");
-class $6c4e85c78a3068f3$export$8d2c87e174389bfd extends (0, $lpSYy.LitElement) {
+var $1hybL = parcelRequire("1hybL");
+class $3192a706339a2f39$export$8d2c87e174389bfd extends (0, $d7rxi$LitElement) {
     setConfig(config) {
         var _config_entities;
         this._config = config;
-        this._schema = this.getSchema((0, $j944g.translateTo)((0, $j944g.getLanguage)()));
+        this._schema = this.getSchema((0, $1hybL.translateTo)((0, $1hybL.getLanguage)()));
         // Migrate to multiple entities
         if (config.entity && !((_config_entities = config.entities) === null || _config_entities === void 0 ? void 0 : _config_entities.length)) {
             const { entity: entity, ...rest } = config;
@@ -57,9 +58,9 @@ class $6c4e85c78a3068f3$export$8d2c87e174389bfd extends (0, $lpSYy.LitElement) {
         this.dispatchEvent(event);
     }
     render() {
-        const lang = (0, $j944g.getLanguage)();
-        const _ = (0, $j944g.translateTo)(lang);
-        return (0, $lpSYy.html)`
+        const lang = (0, $1hybL.getLanguage)();
+        const _ = (0, $1hybL.translateTo)(lang);
+        return (0, $d7rxi$html)`
       <ha-form
         .hass=${this.hass}
         .data=${this._config}
@@ -201,20 +202,20 @@ class $6c4e85c78a3068f3$export$8d2c87e174389bfd extends (0, $lpSYy.LitElement) {
         };
     }
 }
-(0, $i052v.__decorate)([
-    (0, $jIMgP.property)({
+(0, $d7rxi$_)([
+    (0, $d7rxi$property)({
         attribute: false
     })
-], $6c4e85c78a3068f3$export$8d2c87e174389bfd.prototype, "hass", void 0);
-(0, $i052v.__decorate)([
-    (0, $jIMgP.state)()
-], $6c4e85c78a3068f3$export$8d2c87e174389bfd.prototype, "_config", void 0);
-(0, $i052v.__decorate)([
-    (0, $jIMgP.state)()
-], $6c4e85c78a3068f3$export$8d2c87e174389bfd.prototype, "_schema", void 0);
-$6c4e85c78a3068f3$export$8d2c87e174389bfd = (0, $i052v.__decorate)([
-    (0, $jIMgP.customElement)("hasl4-departure-card-editor")
-], $6c4e85c78a3068f3$export$8d2c87e174389bfd);
+], $3192a706339a2f39$export$8d2c87e174389bfd.prototype, "hass", void 0);
+(0, $d7rxi$_)([
+    (0, $d7rxi$state)()
+], $3192a706339a2f39$export$8d2c87e174389bfd.prototype, "_config", void 0);
+(0, $d7rxi$_)([
+    (0, $d7rxi$state)()
+], $3192a706339a2f39$export$8d2c87e174389bfd.prototype, "_schema", void 0);
+$3192a706339a2f39$export$8d2c87e174389bfd = (0, $d7rxi$_)([
+    (0, $d7rxi$customElement)("hasl4-departure-card-editor")
+], $3192a706339a2f39$export$8d2c87e174389bfd);
 
 });
 
