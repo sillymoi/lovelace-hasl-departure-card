@@ -4,10 +4,15 @@
   "description": "HASL Departure Lovelace Card",
   "browserslist": "android >= 5, chrome >= 63",
   "source": "src/index.ts",
-  "module": "dist/hasl4o-departure-card.js",
+  "module": "dist/hasl4-departure-card.js",
   "targets": {
     "module": {
-      "includeNodeModules": true
+      "includeNodeModules": true,
+      "outputFormat": "commonjs",
+      "isLibrary": false,
+      "engines": {
+        "browsers": "chrome >= 51"
+      }
     }
   },
   "scripts": {
@@ -23,6 +28,7 @@
   },
   "devDependencies": {
     "custom-card-helpers": "^1.9.0",
+    "es-check": "^9.6.4",
     "home-assistant-js-websocket": "^8.0.1",
     "parcel": "^2.12.0",
     "parcel-namer-rewrite": "^2.10.3-rc.2",

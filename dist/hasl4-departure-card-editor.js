@@ -15,31 +15,34 @@ function $parcel$export(e, n, v, s) {
           : {};
   var parcelRequire = $parcel$global["parcelRequire55a1"];
 var parcelRegister = parcelRequire.register;
-parcelRegister("9csc1", function(module, exports) {
+parcelRegister("3dsbL", function(module, exports) {
 
-$parcel$export(module.exports, "HASLDepartureCardEditor", () => $8606f342b2a743fe$export$8d2c87e174389bfd);
+$parcel$export(module.exports, "HASLDepartureCardEditor", () => $447062e29380eb33$export$8d2c87e174389bfd);
 
-var $6Auly = parcelRequire("6Auly");
 
-var $6t47e = parcelRequire("6t47e");
 
-var $fUHpH = parcelRequire("fUHpH");
 
-var $cGi29 = parcelRequire("cGi29");
-class $8606f342b2a743fe$export$8d2c87e174389bfd extends (0, $6t47e.LitElement) {
+
+var $fSiEE = parcelRequire("fSiEE");
+
+var $By8mr = parcelRequire("By8mr");
+
+var $f3ltL = parcelRequire("f3ltL");
+class $447062e29380eb33$export$8d2c87e174389bfd extends (0, $fSiEE.LitElement) {
     setConfig(config) {
         var _config_entities;
         this._config = config;
-        this._schema = this.getSchema((0, $cGi29.translateTo)((0, $cGi29.getLanguage)()));
+        this._schema = this.getSchema((0, $f3ltL.translateTo)((0, $f3ltL.getLanguage)()));
         // Migrate to multiple entities
         if (config.entity && !((_config_entities = config.entities) === null || _config_entities === void 0 ? void 0 : _config_entities.length)) {
-            const { entity: entity, ...rest } = config;
-            this._dispatchConfigChangedEvent({
-                ...rest,
+            const { entity: entity } = config, rest = (0, $eWwuv._)(config, [
+                "entity"
+            ]);
+            this._dispatchConfigChangedEvent((0, $kFQj9._)((0, $kSRzG._)({}, rest), {
                 entities: [
                     config.entity
                 ]
-            });
+            }));
         }
     }
     _valueChanged(ev) {
@@ -57,9 +60,9 @@ class $8606f342b2a743fe$export$8d2c87e174389bfd extends (0, $6t47e.LitElement) {
         this.dispatchEvent(event);
     }
     render() {
-        const lang = (0, $cGi29.getLanguage)();
-        const _ = (0, $cGi29.translateTo)(lang);
-        return (0, $6t47e.html)`
+        const lang = (0, $f3ltL.getLanguage)();
+        const _ = (0, $f3ltL.translateTo)(lang);
+        return (0, $fSiEE.html)`
       <ha-form
         .hass=${this.hass}
         .data=${this._config}
@@ -201,22 +204,71 @@ class $8606f342b2a743fe$export$8d2c87e174389bfd extends (0, $6t47e.LitElement) {
         };
     }
 }
-(0, $6Auly.__decorate)([
-    (0, $fUHpH.property)({
+(0, $5fGPH._)([
+    (0, $By8mr.property)({
         attribute: false
     })
-], $8606f342b2a743fe$export$8d2c87e174389bfd.prototype, "hass", void 0);
-(0, $6Auly.__decorate)([
-    (0, $fUHpH.state)()
-], $8606f342b2a743fe$export$8d2c87e174389bfd.prototype, "_config", void 0);
-(0, $6Auly.__decorate)([
-    (0, $fUHpH.state)()
-], $8606f342b2a743fe$export$8d2c87e174389bfd.prototype, "_schema", void 0);
-$8606f342b2a743fe$export$8d2c87e174389bfd = (0, $6Auly.__decorate)([
-    (0, $fUHpH.customElement)("hasl4-departure-card-editor")
-], $8606f342b2a743fe$export$8d2c87e174389bfd);
+], $447062e29380eb33$export$8d2c87e174389bfd.prototype, "hass", void 0);
+(0, $5fGPH._)([
+    (0, $By8mr.state)()
+], $447062e29380eb33$export$8d2c87e174389bfd.prototype, "_config", void 0);
+(0, $5fGPH._)([
+    (0, $By8mr.state)()
+], $447062e29380eb33$export$8d2c87e174389bfd.prototype, "_schema", void 0);
+$447062e29380eb33$export$8d2c87e174389bfd = (0, $5fGPH._)([
+    (0, $By8mr.customElement)("hasl4-departure-card-editor")
+], $447062e29380eb33$export$8d2c87e174389bfd);
 
 });
+
+parcelRegister("eWwuv", function(module, exports) {
+
+$parcel$export(module.exports, "_", () => $fe20cad1f3b8aa41$export$71511d61b312f219, (v) => $fe20cad1f3b8aa41$export$71511d61b312f219 = v);
+var $fe20cad1f3b8aa41$export$71511d61b312f219;
+var $fe20cad1f3b8aa41$export$69fdd232f62cde60;
+"use strict";
+
+var $ja3kc = parcelRequire("ja3kc");
+$fe20cad1f3b8aa41$export$71511d61b312f219 = $fe20cad1f3b8aa41$export$69fdd232f62cde60 = $fe20cad1f3b8aa41$var$_object_without_properties;
+function $fe20cad1f3b8aa41$var$_object_without_properties(source, excluded) {
+    if (source == null) return {};
+    var target = $ja3kc._(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+
+});
+parcelRegister("ja3kc", function(module, exports) {
+
+$parcel$export(module.exports, "_", () => $84ba8aa2274dcf68$export$71511d61b312f219, (v) => $84ba8aa2274dcf68$export$71511d61b312f219 = v);
+var $84ba8aa2274dcf68$export$71511d61b312f219;
+var $84ba8aa2274dcf68$export$7a4a7e38737aceb4;
+"use strict";
+$84ba8aa2274dcf68$export$71511d61b312f219 = $84ba8aa2274dcf68$export$7a4a7e38737aceb4 = $84ba8aa2274dcf68$var$_object_without_properties_loose;
+function $84ba8aa2274dcf68$var$_object_without_properties_loose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+
+});
+
 
 
 //# sourceMappingURL=hasl4-departure-card-editor.js.map
