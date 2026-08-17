@@ -1986,6 +1986,9 @@ class $a10325e83296a574$export$7ded24e6705f9c64 extends (0, $4IYc3.LitElement) {
             return yield (parcelRequire("hEIwC")).then(()=>document.createElement("hasl4-departure-card-editor"));
         })();
     }
+    static getStubConfig() {
+        return (0, $kSRzG._)({}, (0, $9d4b2649d7c6c213$export$c2f8e0cc249a8d8f));
+    }
     render() {
         var _this_config, _this_config1, _this_config2;
         if (!this.config) return (0, $8YMcE.html)`<ha-card><div class="card-content">No config...</div></ha-card>`;
@@ -2245,7 +2248,6 @@ class $a10325e83296a574$export$7ded24e6705f9c64 extends (0, $4IYc3.LitElement) {
     }
 }
 $a10325e83296a574$export$7ded24e6705f9c64.styles = (0, $e31b19ee9bacfcfa$export$2e2bcd8739ae039);
-$a10325e83296a574$export$7ded24e6705f9c64.getStubConfig = ()=>(0, $kSRzG._)({}, (0, $9d4b2649d7c6c213$export$c2f8e0cc249a8d8f));
 (0, $5fGPH._)([
     (0, $SFo8Y.state)()
 ], $a10325e83296a574$export$7ded24e6705f9c64.prototype, "config", void 0);
